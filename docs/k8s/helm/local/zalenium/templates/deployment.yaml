@@ -60,6 +60,8 @@ spec:
               value: {{ .Values.hub.cpuLimit }}
             - name: ZALENIUM_KUBERNETES_MEMORY_REQUEST
               value: {{ .Values.hub.memRequest }}
+            - name: ZALENIUM_KUBERNETES_MEMORY_LIMIT
+              value: {{ .Values.hub.memLimit }}
             {{- if eq true .Values.hub.sauceLabsEnabled }}
             - name: SAUCE_USERNAME
               value: {{ .Values.hub.sauceUserName }}
